@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Row, Col } from "react-bootstrap";
+import Avatar from "./components/Avatar";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Details from "./components/Details";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <div className="cv">
+        <Row>
+          <Col lg={4}>
+            <Avatar />
+          </Col>
+          <Col lg={8}>
+            <Header />
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={3}>
+            <Sidebar />
+          </Col>
+          <Col lg={9}>
+            <Details />
+          </Col>
+        </Row>
+      </div>
+    );
+  }
 }
 
 export default App;
