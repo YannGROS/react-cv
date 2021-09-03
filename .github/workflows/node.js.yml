@@ -37,3 +37,8 @@ jobs:
     
 #    - name: Run tests
 #      run: npm test a
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Build-${{ matrix.node-version }}
+        path: build/${{ matrix.node-version }}
