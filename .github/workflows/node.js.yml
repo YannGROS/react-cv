@@ -40,5 +40,5 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: Build-${{ matrix.node-version }}
-        path: build/${{ matrix.node-version }}
+        name: react-github-actions-build
+        path: build
